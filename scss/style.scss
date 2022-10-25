@@ -1,0 +1,118 @@
+@use "_reset.scss" as *;
+@use "_variables.scss" as *;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $Darkcyan;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.profile {
+  position: relative;
+  width: 100%;
+  // min-width: auto;
+  max-width: 380px;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 12px 20px -5px rgba(0, 0, 0, 0.7);
+
+  .bg_profile {
+    min-width: 100%;
+    height: 135px;
+    background: url("../images/bg-pattern-card.svg") center/cover;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    img {
+      width: 30%;
+      min-width: 50px;
+      outline: 5px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    .name_age {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 70px;
+      width: 100%;
+
+      .name {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+
+      .age {
+        display: inline-block;
+        margin-left: 7px;
+        font-size: 1.8rem;
+        color: $Darkgray;
+      }
+    }
+
+    .city {
+      margin-top: 13px;
+      // border: 2px solid red;
+      font-size: 1.4rem;
+      color: $Darkgray;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 85px;
+      border-top: 1px solid rgba(128, 128, 128, 0.178);
+
+      .follower,
+      .like,
+      .photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 2px solid red;
+
+        p:nth-child(1) {
+          font-weight: 700;
+        }
+
+        p:nth-child(2) {
+          font-size: 1rem;
+          letter-spacing: 0.2rem;
+          margin-top: 7px;
+          color: $Darkgray;
+        }
+      }
+    }
+  }
+}
